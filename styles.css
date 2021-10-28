@@ -1,0 +1,23 @@
+h1 {
+    font-size: large;
+}
+h2, h3{
+    font-size: medium;
+}
+#tutorial-id-1{
+    color: blue;
+}
+.tutorial-class{
+    color: red;
+}
+img[src="https://github.com"]{
+    color: green;
+}
+.tutorial-class > p{
+    border: green;
+}
+div{
+    display: inline-block;
+    width: 100px;
+    border: solid 1px blue;
+}
