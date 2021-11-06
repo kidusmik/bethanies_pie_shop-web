@@ -21,3 +21,31 @@ div{
     width: 100px;
     border: solid 1px blue;
 }
+.columns {
+    border: solid 1px blue;
+    display: flex;
+}
+.columns > div {
+    border: solid 1px black;
+    flex: 1;
+}
+.columns > div:nth-of-type(2) {
+    flex: 2;
+}
+@media print {
+    .mobile, .desktop {
+        display: none;
+    }
+
+    .print {
+        display: block;
+    }
+}
+@media screen and (min-width: 768px) {
+    .mobile {
+        display: none;
+    }
+    .desktop {
+        display: block;
+    }
+}
