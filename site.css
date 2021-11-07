@@ -25,7 +25,7 @@ header {
     padding: 10px;
 }
 
-nav a:visited,
+    nav a:visited,
 nav a:link {
     color: #fff;
     text-decoration: none;
@@ -119,3 +119,4 @@ article {
     border-radius: 3px;
     color: #fff;
 }
+
