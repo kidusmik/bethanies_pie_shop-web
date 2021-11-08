@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="site.css" type="text/css" />
     <title>Order | Bethany's Pie Shop</title>
     <style>
+        @media only screen and (min-width: 768px) {
+            article {
+                width: 350px;
+            }
+        }
+
         .input-group {
             margin-bottom: 20px;
         }
@@ -69,6 +75,8 @@
             </div>
 
             <form action="http://localhost:7071/api/post" method="post">
+
+                <input type="hidden" id="pie-order" name="pie-order">
 
                 <div class="input-group">
                     <div><label for="first-name">First Name</label></div>
@@ -137,6 +145,9 @@
 
         if (order) {
             const pieOrder = JSON.parse(order);
+
+            const orderInput = document.querySelector("#pie-order");
+            orderInput.value = order;
 
             const pie = document.querySelector(".pie");
 
