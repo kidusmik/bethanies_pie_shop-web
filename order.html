@@ -77,6 +77,7 @@
             <form action="http://localhost:7071/api/post" method="post">
 
                 <input type="hidden" id="pie-order" name="pie-order">
+                <input type="hidden" id="location" name="location">
 
                 <div class="input-group">
                     <div><label for="first-name">First Name</label></div>
@@ -140,6 +141,27 @@
 
 <script>
     window.addEventListener("DOMContentLoaded", function (e) {
+
+        const locationBox = document.querySelector("#location");
+
+        let location = {
+            latitude: "unknown",
+            longitude: "unknown"
+        };
+
+        window.navigator.geolocation.getCurrentPosition(
+            function (position) {
+                location = {
+                    latitude: position.coords.latitude,
+                    longitude: position.coords.longitude
+                };
+
+                locationBox.value = JSON.stringify(location);
+            },
+
+            function (error) {
+                locationBox.value = JSON.stringify(location);
+            });
 
         const order = localStorage.getItem("order");
 
