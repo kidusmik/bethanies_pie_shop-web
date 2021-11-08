@@ -25,7 +25,56 @@
         <aside><img src="images/logo.png" alt="Bethanie's Pie Shop Logo"></aside>
 
         <article>
+            <h1>Order</h1>
+            <form action="http://localhost:7071/api/post" method="post">
 
+                <div class="input-group">
+                    <div><label for="first-name">First Name</label></div>
+                    <div><input type="text" name="first-name" id="first-name" /></div>
+                </div>
+
+                <div class="input-group">
+                    <div><label for="last-name">Last Name</label></div>
+                    <div><input type="text" name="last-name" id="last-name" /></div>
+                </div>
+
+                <div class="input-group">
+                    <div><label for="address">Address</label></div>
+                    <div><input type="text" name="address" id="address" /></div>
+                </div>
+
+                <div class="input-group">
+                    <div><label for="city">City</label></div>
+
+                    <div>
+                        <select name="city" id="city">
+                            <option value="" selected>[ Select One ]</option>
+                            <option value="Addis-Ababa">Addis Ababa</option>
+                            <option value="Nathret">Nathret</option>
+                            <option value="Dire-Dawa">Dire Dawa</option>
+                            <option value="Hawassa">Hawassa</option>
+                            <option value="Bahir-Dar">Bahir Dar</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div><label for="po-box">Postal Box</label></div>
+                    <div><input type="text" name="po-box" id="po-box" /></div>
+                </div>
+
+                <div class="input-group">
+                    <div><label for="comments">Comments</label></div>
+                    <div>
+                        <textarea name="comments" id="comments" cols="30" rows="10">
+
+                        </textarea>
+                    </div>
+                </div>
+
+                <input type="reset" value="Reset" />
+                <input type="submit" value="Order" />
+            </form>
         </article>
     </main>
     <footer>
